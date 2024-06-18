@@ -1,0 +1,23 @@
+<html>
+  <body>
+    <form>
+       Enter number:
+          <input type="text"id="t1"><br>
+          <input type="button"value="submit"onclick="check()">
+    </form>
+  </body>
+</html>
+<script>
+   function check()
+    {
+         var n=document.getElementById("t1").value;
+        for(i=1;i<=n;i++)
+      {
+         for(j=1;j<=i;j++)
+         {
+           document.write("*");
+         }
+      document.write("<br">);
+     }
+   }
+</script>

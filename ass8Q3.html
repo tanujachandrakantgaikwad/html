@@ -1,0 +1,28 @@
+<html>
+ <body>
+  <form> 
+   Enter number:
+   <input type="text"id="m1"><br>
+   <input type="button"value="submit"onclick="armstrong()">
+  </form>
+ </body>
+</html>
+
+<script>
+  function armstrong()
+ {
+  var n=document.getElementById("m1").value;
+     r=0;
+    var t=n;
+   while(n>0)
+  {
+  d=n%10;
+  r=r+d*d*d;
+  n=n/10;
+ }
+  if(r==t)
+   document.write("number is armstrong");
+ else
+   document.write("number is not armstrong");
+ }
+</script>

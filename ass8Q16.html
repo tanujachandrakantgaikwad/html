@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <form>
+       Enter Usernumber:
+          <input type="text" id="t1"><br>
+       Enter password:
+         <input type="text" id="t2"><br>
+          <input type="button" value="submit" onclick="show()">
+    </form>
+  </body>
+</html>
+<script>
+   function show()
+ {
+   var u=document.getElementById("t1").value;
+   var p=document.getElementById("t2").value;
+     if(u=="tanuja" && p=="bbaca")
+        alert("login successfully");
+     else
+         alert("invalid uername and password");
+ }
+</script>

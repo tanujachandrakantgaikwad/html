@@ -1,0 +1,24 @@
+<html>
+ <body>
+  <form> 
+    Enter number:
+   <input type="text"id="t1"><br>
+   <input type="button"value="ok"onclick="show()">
+  </form>
+ </body>
+</html>
+
+<script>
+   function show()
+ {
+   var n=document.getElementById("t1").value;
+    s=0;
+ while(n>0)
+  {
+    d=n%10;
+    s=s+d;
+    n=parseInt(n/10);
+  }
+  document.write("sum of digit="+s);
+ }
+</script>

@@ -1,0 +1,21 @@
+DECLARE
+  v_rno student51.rno%type;
+  v_sname student51.sname%type;
+  v_per student51.per%type;
+BEGIN
+  v_rno:=:v_rno;
+  select sname,per into v_sname,v_per from student51 where rno=v_rno;
+  dbms_output.put_line('Student Name='||v_sname);
+  dbms_output.put_line('Student PErrr='||v_per);
+  if(v_per>=70)then
+      dbms_output.put_line('Grade=Outstanding');
+  elsif(v_per>=60)then
+      dbms_output.put_line('Grade=A');
+  elsif(v_per>=50)then
+      dbms_output.put_line('Grade=B');
+  elsif(v_per>=40)then
+      dbms_output.put_line('Grade=Pass');
+  else
+      dbms_output.put_line('Napas Zala Study kar..');
+  end if;
+END;

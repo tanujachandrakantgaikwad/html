@@ -1,0 +1,22 @@
+declare
+  m_lab int;
+  m_labname varchar2(20);
+  m_capacity int;
+  m_equipment varchar2(20);
+  Invalid_capacity_rang exception;
+begin
+   m_lab:=:lab;
+   m_labname:=:labname;
+   m_capacity:=:capacity;
+   m_equipment:=:equipment;
+   
+   if(m_capacity>=40)then
+     raise Invalid_capacity_rang;
+  end if;
+    insert into lab values(m_lab,m_name,m_capacity,m_equipment); 
+  dbms_output.put_line('Record insert..');
+exception
+  when Invalid_capacity_rang then
+   dbms_output.put_line('rang are not >40 so not found'); 
+end;
+/
